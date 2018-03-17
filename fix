@@ -1,0 +1,444 @@
+
+/home/danielle/GHP/Senior/BuildAndGo-Server/script/seed.js
+   1:1   error  Comments should not begin with an uppercase character          capitalized-comments
+   2:1   error  Line 2 exceeds the maximum line length of 80                   max-len
+   8:1   error  Line 8 exceeds the maximum line length of 80                   max-len
+  12:12  error  'require' is not defined                                       no-undef
+  13:1   error  Combine this with the previous 'const' statement               one-var
+  13:16  error  'require' is not defined                                       no-undef
+  15:1   error  Missing JSDoc comment                                          require-jsdoc
+  15:1   error  Expected a function expression                                 func-style
+  15:24  error  Block must be padded by blank lines                            padded-blocks
+  17:3   error  Unexpected console statement                                   no-console
+  18:1   error  Line 18 exceeds the maximum line length of 80                  max-len
+  18:3   error  Expected a block comment instead of consecutive line comments  multiline-comment-style
+  18:3   error  Comments should not begin with an uppercase character          capitalized-comments
+  21:3   error  Expected blank line after variable declarations                newline-after-var
+  22:43  error  Object properties must go on a new line                        object-property-newline
+  23:45  error  Object properties must go on a new line                        object-property-newline
+  25:1   error  Line 25 exceeds the maximum line length of 80                  max-len
+  25:3   error  Comments should not begin with an uppercase character          capitalized-comments
+  25:3   error  Expected a block comment instead of consecutive line comments  multiline-comment-style
+  26:1   error  Line 26 exceeds the maximum line length of 80                  max-len
+  27:3   error  Unexpected console statement                                   no-console
+  28:3   error  Unexpected console statement                                   no-console
+  28:15  error  Strings must use singlequote                                   quotes
+  29:1   error  Block must be padded by blank lines                            padded-blocks
+  31:1   error  Expected a block comment instead of consecutive line comments  multiline-comment-style
+  31:1   error  Comments should not begin with an uppercase character          capitalized-comments
+  32:1   error  Line 32 exceeds the maximum line length of 80                  max-len
+  35:3   error  Expected dot to be on same line as object                      dot-location
+  35:10  error  Expected parentheses around arrow function argument            arrow-parens
+  35:17  error  Block must be padded by blank lines                            padded-blocks
+  36:5   error  Unexpected console statement                                   no-console
+  37:5   error  Unexpected console statement                                   no-console
+  38:5   error  'process' is not defined                                       no-undef
+  39:3   error  Block must be padded by blank lines                            padded-blocks
+  40:3   error  Expected dot to be on same line as object                      dot-location
+  40:15  error  Block must be padded by blank lines                            padded-blocks
+  41:5   error  Unexpected console statement                                   no-console
+  43:5   error  Unexpected console statement                                   no-console
+  44:3   error  Block must be padded by blank lines                            padded-blocks
+  51:1   error  Unexpected console statement                                   no-console
+  52:1   error  Newline not allowed at end of file                             eol-last
+
+/home/danielle/GHP/Senior/BuildAndGo-Server/server/api/index.js
+   1:1   error  Expected blank line after variable declarations                                                newline-after-var
+   1:16  error  'require' is not defined                                                                       no-undef
+   1:35  error  A function with a name starting with an uppercase letter should only be used as a constructor  new-cap
+   2:1   error  'module' is not defined                                                                        no-undef
+   4:22  error  'require' is not defined                                                                       no-undef
+   6:32  error  Block must be padded by blank lines                                                            padded-blocks
+   7:3   error  Expected blank line after variable declarations                                                newline-after-var
+  10:1   error  Block must be padded by blank lines                                                            padded-blocks
+  11:1   error  Newline not allowed at end of file                                                             eol-last
+
+/home/danielle/GHP/Senior/BuildAndGo-Server/server/api/users.js
+   1:16  error  'require' is not defined                                                                       no-undef
+   1:35  error  A function with a name starting with an uppercase letter should only be used as a constructor  new-cap
+   2:1   error  Expected blank line after variable declarations                                                newline-after-var
+   2:1   error  Combine this with the previous 'const' statement                                               one-var
+   2:16  error  'require' is not defined                                                                       no-undef
+   3:1   error  'module' is not defined                                                                        no-undef
+   5:37  error  Block must be padded by blank lines                                                            padded-blocks
+   7:5   error  Expected a block comment instead of consecutive line comments                                  multiline-comment-style
+  10:23  error  There should be a linebreak after this element                                                 array-element-newline
+  12:5   error  Expected dot to be on same line as object                                                      dot-location
+  12:11  error  Expected parentheses around arrow function argument                                            arrow-parens
+  13:5   error  Expected dot to be on same line as object                                                      dot-location
+  14:1   error  Block must be padded by blank lines                                                            padded-blocks
+  15:1   error  Newline not allowed at end of file                                                             eol-last
+
+/home/danielle/GHP/Senior/BuildAndGo-Server/server/api/users.spec.js
+   3:18  error  'require' is not defined                                                                               no-undef
+   4:1   error  Combine this with the previous 'const' statement                                                       one-var
+   4:17  error  'require' is not defined                                                                               no-undef
+   5:1   error  Combine this with the previous 'const' statement                                                       one-var
+   5:12  error  'require' is not defined                                                                               no-undef
+   6:1   error  Combine this with the previous 'const' statement                                                       one-var
+   6:13  error  'require' is not defined                                                                               no-undef
+   7:1   error  Combine this with the previous 'const' statement                                                       one-var
+   9:31  error  Block must be padded by blank lines                                                                    padded-blocks
+  10:20  error  Unexpected block statement surrounding arrow body; move the returned value immediately after the `=>`  arrow-body-style
+  10:20  error  Block must be padded by blank lines                                                                    padded-blocks
+  12:3   error  Block must be padded by blank lines                                                                    padded-blocks
+  14:33  error  Block must be padded by blank lines                                                                    padded-blocks
+  17:22  error  Unexpected block statement surrounding arrow body; move the returned value immediately after the `=>`  arrow-body-style
+  17:22  error  Block must be padded by blank lines                                                                    padded-blocks
+  18:26  error  Unexpected line break after this opening brace                                                         object-curly-newline
+  20:7   error  Unexpected line break before this closing brace                                                        object-curly-newline
+  21:5   error  Block must be padded by blank lines                                                                    padded-blocks
+  23:32  error  Block must be padded by blank lines                                                                    padded-blocks
+  23:32  error  Unexpected block statement surrounding arrow body; move the returned value immediately after the `=>`  arrow-body-style
+  25:9   error  Expected dot to be on same line as object                                                              dot-location
+  26:9   error  Expected dot to be on same line as object                                                              dot-location
+  26:17  error  No magic number: 200                                                                                   no-magic-numbers
+  27:9   error  Expected dot to be on same line as object                                                              dot-location
+  27:15  error  Expected parentheses around arrow function argument                                                    arrow-parens
+  27:22  error  Block must be padded by blank lines                                                                    padded-blocks
+  29:27  error  No magic number: 0                                                                                     no-magic-numbers
+  30:9   error  Block must be padded by blank lines                                                                    padded-blocks
+  31:5   error  Block must be padded by blank lines                                                                    padded-blocks
+  32:3   error  Block must be padded by blank lines                                                                    padded-blocks
+  33:1   error  Block must be padded by blank lines                                                                    padded-blocks
+  34:1   error  Newline not allowed at end of file                                                                     eol-last
+
+/home/danielle/GHP/Senior/BuildAndGo-Server/server/auth/google.js
+   1:18  error  'require' is not defined                                                                       no-undef
+   2:1   error  Combine this with the previous 'const' statement                                               one-var
+   2:16  error  'require' is not defined                                                                       no-undef
+   2:35  error  A function with a name starting with an uppercase letter should only be used as a constructor  new-cap
+   3:1   error  Combine this with the previous 'const' statement                                               one-var
+   3:24  error  'require' is not defined                                                                       no-undef
+   4:1   error  Combine this with the previous 'const' statement                                               one-var
+   4:1   error  Expected blank line after variable declarations                                                newline-after-var
+   4:16  error  'require' is not defined                                                                       no-undef
+   5:1   error  'module' is not defined                                                                        no-undef
+   7:1   error  Comments should not begin with an uppercase character                                          capitalized-comments
+  21:6   error  'process' is not defined                                                                       no-undef
+  21:39  error  'process' is not defined                                                                       no-undef
+  23:3   error  Unexpected console statement                                                                   no-console
+  28:15  error  'process' is not defined                                                                       no-undef
+  29:19  error  'process' is not defined                                                                       no-undef
+  30:18  error  'process' is not defined                                                                       no-undef
+  33:1   error  Line 33 exceeds the maximum line length of 80                                                  max-len
+  33:3   error  Combine this with the previous 'const' statement                                               one-var
+  33:53  error  Arrow function has too many parameters (4). Maximum allowed is 3                               max-params
+  33:93  error  Block must be padded by blank lines                                                            padded-blocks
+  35:5   error  Combine this with the previous 'const' statement                                               one-var
+  36:5   error  Combine this with the previous 'const' statement                                               one-var
+  36:34  error  No magic number: 0                                                                             no-magic-numbers
+  39:7   error  Expected dot to be on same line as object                                                      dot-location
+  39:13  error  Expected parentheses around arrow function argument                                            arrow-parens
+  39:13  error  Arrow function used ambiguously with a conditional expression                                  no-confusing-arrow
+  39:26  error  Gratuitous parentheses around expression                                                       no-extra-parens
+  41:30  error  Object properties must go on a new line                                                        object-property-newline
+  41:37  error  Object properties must go on a new line                                                        object-property-newline
+  42:11  error  Expected dot to be on same line as object                                                      dot-location
+  42:17  error  Expected parentheses around arrow function argument                                            arrow-parens
+  44:7   error  Expected dot to be on same line as object                                                      dot-location
+  45:3   error  Block must be padded by blank lines                                                            padded-blocks
+  57:1   error  Newline not allowed at end of file                                                             eol-last
+
+/home/danielle/GHP/Senior/BuildAndGo-Server/server/auth/index.js
+   1:16  error  'require' is not defined                                                                       no-undef
+   1:35  error  A function with a name starting with an uppercase letter should only be used as a constructor  new-cap
+   2:1   error  Combine this with the previous 'const' statement                                               one-var
+   2:1   error  Expected blank line after variable declarations                                                newline-after-var
+   2:14  error  'require' is not defined                                                                       no-undef
+   3:1   error  'module' is not defined                                                                        no-undef
+   5:43  error  Block must be padded by blank lines                                                            padded-blocks
+   7:5   error  Expected dot to be on same line as object                                                      dot-location
+   7:11  error  Expected parentheses around arrow function argument                                            arrow-parens
+   7:19  error  Block must be padded by blank lines                                                            padded-blocks
+   8:18  error  Block must be padded by blank lines                                                            padded-blocks
+   9:20  error  No magic number: 401                                                                           no-magic-numbers
+  10:7   error  Block must be padded by blank lines                                                            padded-blocks
+  10:14  error  Unexpected negated condition                                                                   no-negated-condition
+  10:60  error  Block must be padded by blank lines                                                            padded-blocks
+  11:20  error  No magic number: 401                                                                           no-magic-numbers
+  12:7   error  Block must be padded by blank lines                                                            padded-blocks
+  12:14  error  Block must be padded by blank lines                                                            padded-blocks
+  13:25  error  Expected parentheses around arrow function argument                                            arrow-parens
+  13:25  error  Arrow function used ambiguously with a conditional expression                                  no-confusing-arrow
+  13:32  error  Gratuitous parentheses around expression                                                       no-extra-parens
+  14:7   error  Block must be padded by blank lines                                                            padded-blocks
+  15:5   error  Block must be padded by blank lines                                                            padded-blocks
+  16:5   error  Expected dot to be on same line as object                                                      dot-location
+  17:1   error  Block must be padded by blank lines                                                            padded-blocks
+  19:44  error  Block must be padded by blank lines                                                            padded-blocks
+  21:5   error  Expected dot to be on same line as object                                                      dot-location
+  21:11  error  Expected parentheses around arrow function argument                                            arrow-parens
+  21:19  error  Block must be padded by blank lines                                                            padded-blocks
+  22:23  error  Expected parentheses around arrow function argument                                            arrow-parens
+  22:23  error  Arrow function used ambiguously with a conditional expression                                  no-confusing-arrow
+  22:30  error  Gratuitous parentheses around expression                                                       no-extra-parens
+  23:5   error  Block must be padded by blank lines                                                            padded-blocks
+  24:5   error  Expected dot to be on same line as object                                                      dot-location
+  24:12  error  Expected parentheses around arrow function argument                                            arrow-parens
+  24:19  error  Block must be padded by blank lines                                                            padded-blocks
+  25:58  error  Block must be padded by blank lines                                                            padded-blocks
+  26:20  error  No magic number: 401                                                                           no-magic-numbers
+  27:7   error  Block must be padded by blank lines                                                            padded-blocks
+  27:14  error  Block must be padded by blank lines                                                            padded-blocks
+  28:9   error  Expected return with your callback function                                                    callback-return
+  29:7   error  Block must be padded by blank lines                                                            padded-blocks
+  30:5   error  Block must be padded by blank lines                                                            padded-blocks
+  31:1   error  Block must be padded by blank lines                                                            padded-blocks
+  33:38  error  Block must be padded by blank lines                                                            padded-blocks
+  37:1   error  Block must be padded by blank lines                                                            padded-blocks
+  39:33  error  Block must be padded by blank lines                                                            padded-blocks
+  41:1   error  Block must be padded by blank lines                                                            padded-blocks
+  43:23  error  'require' is not defined                                                                       no-undef
+  44:1   error  Newline not allowed at end of file                                                             eol-last
+
+/home/danielle/GHP/Senior/BuildAndGo-Server/server/db/db.js
+   1:19  error  'require' is not defined                          no-undef
+   2:1   error  Combine this with the previous 'const' statement  one-var
+   2:13  error  'require' is not defined                          no-undef
+   4:1   error  Combine this with the previous 'const' statement  one-var
+   4:34  error  'process' is not defined                          no-undef
+   6:1   error  Expected blank line after variable declarations   newline-after-var
+   6:1   error  Combine this with the previous 'const' statement  one-var
+   7:3   error  'process' is not defined                          no-undef
+   8:3   error  Unexpected line break after this opening brace    object-curly-newline
+   9:18  error  Trailing spaces not allowed                       no-trailing-spaces
+  10:3   error  Unexpected line break before this closing brace   object-curly-newline
+  12:1   error  'module' is not defined                           no-undef
+  13:1   error  Newline not allowed at end of file                eol-last
+
+/home/danielle/GHP/Senior/BuildAndGo-Server/server/db/index.js
+  1:12  error  'require' is not defined            no-undef
+  4:1   error  'require' is not defined            no-undef
+  6:1   error  'module' is not defined             no-undef
+  7:1   error  Newline not allowed at end of file  eol-last
+
+/home/danielle/GHP/Senior/BuildAndGo-Server/server/db/models/index.js
+   1:14  error  'require' is not defined                          no-undef
+   2:1   error  Combine this with the previous 'const' statement  one-var
+   2:19  error  'require' is not defined                          no-undef
+   3:1   error  Combine this with the previous 'const' statement  one-var
+   3:14  error  'require' is not defined                          no-undef
+   4:1   error  Combine this with the previous 'const' statement  one-var
+   4:14  error  'require' is not defined                          no-undef
+  10:1   error  'module' is not defined                           no-undef
+  16:1   error  Newline not allowed at end of file                eol-last
+
+/home/danielle/GHP/Senior/BuildAndGo-Server/server/db/models/inventory.js
+   1:19  error  'require' is not defined                          no-undef
+   2:1   error  Combine this with the previous 'const' statement  one-var
+   2:12  error  'require' is not defined                          no-undef
+   4:1   error  Combine this with the previous 'const' statement  one-var
+   5:15  error  Unexpected line break after this opening brace    object-curly-newline
+   6:32  error  Unexpected trailing comma                         comma-dangle
+   7:5   error  Unexpected line break before this closing brace   object-curly-newline
+  10:2   error  Expected space or tab after '//' in comment       spaced-comment
+  12:1   error  'module' is not defined                           no-undef
+
+/home/danielle/GHP/Senior/BuildAndGo-Server/server/db/models/part.js
+   1:19  error  'require' is not defined                          no-undef
+   2:1   error  Combine this with the previous 'const' statement  one-var
+   2:12  error  'require' is not defined                          no-undef
+   4:1   error  Combine this with the previous 'const' statement  one-var
+  19:2   error  Expected space or tab after '//' in comment       spaced-comment
+  21:1   error  'module' is not defined                           no-undef
+
+/home/danielle/GHP/Senior/BuildAndGo-Server/server/db/models/type.js
+   1:19  error  'require' is not defined                          no-undef
+   2:1   error  Combine this with the previous 'const' statement  one-var
+   2:12  error  'require' is not defined                          no-undef
+   4:1   error  Combine this with the previous 'const' statement  one-var
+  13:12  error  Unexpected line break after this opening brace    object-curly-newline
+  15:5   error  Unexpected line break before this closing brace   object-curly-newline
+  18:1   error  'module' is not defined                           no-undef
+
+/home/danielle/GHP/Senior/BuildAndGo-Server/server/db/models/user.js
+   1:16  error  'require' is not defined                                       no-undef
+   2:1   error  Combine this with the previous 'const' statement               one-var
+   2:19  error  'require' is not defined                                       no-undef
+   3:1   error  Combine this with the previous 'const' statement               one-var
+   3:12  error  'require' is not defined                                       no-undef
+   5:1   error  Combine this with the previous 'const' statement               one-var
+  13:5   error  Comments should not begin with an uppercase character          capitalized-comments
+  13:5   error  Expected a block comment instead of consecutive line comments  multiline-comment-style
+  14:5   error  Comments should not begin with an uppercase character          capitalized-comments
+  15:8   error  Missing space before function parentheses                      space-before-function-paren
+  15:11  error  Block must be padded by blank lines                            padded-blocks
+  17:5   error  Block must be padded by blank lines                            padded-blocks
+  21:5   error  Comments should not begin with an uppercase character          capitalized-comments
+  21:5   error  Expected a block comment instead of consecutive line comments  multiline-comment-style
+  22:5   error  Comments should not begin with an uppercase character          capitalized-comments
+  23:12  error  Block must be padded by blank lines                            padded-blocks
+  25:5   error  Block must be padded by blank lines                            padded-blocks
+  27:13  error  Unexpected line break after this opening brace                 object-curly-newline
+  29:3   error  Unexpected line break before this closing brace                object-curly-newline
+  32:1   error  'module' is not defined                                        no-undef
+  34:1   error  Missing JSDoc @returns for function                            valid-jsdoc
+  34:1   error  Missing JSDoc for parameter 'candidatePwd'                     valid-jsdoc
+  37:34  error  Unexpected unnamed function                                    func-names
+  37:58  error  Block must be padded by blank lines                            padded-blocks
+  39:1   error  Block must be padded by blank lines                            padded-blocks
+  41:1   error  Missing JSDoc @returns for function                            valid-jsdoc
+  44:21  error  Unexpected unnamed function                                    func-names
+  44:33  error  Block must be padded by blank lines                            padded-blocks
+  45:29  error  No magic number: 16                                            no-magic-numbers
+  46:1   error  Block must be padded by blank lines                            padded-blocks
+  48:24  error  Unexpected unnamed function                                    func-names
+  48:51  error  Block must be padded by blank lines                            padded-blocks
+  50:5   error  Expected dot to be on same line as object                      dot-location
+  51:5   error  Expected dot to be on same line as object                      dot-location
+  52:5   error  Expected dot to be on same line as object                      dot-location
+  53:5   error  Expected dot to be on same line as object                      dot-location
+  54:1   error  Block must be padded by blank lines                            padded-blocks
+  56:1   error  Missing JSDoc @returns for function                            valid-jsdoc
+  56:1   error  Missing JSDoc for parameter 'user'                             valid-jsdoc
+  59:1   error  Combine this with the previous 'const' statement               one-var
+  59:28  error  Expected parentheses around arrow function argument            arrow-parens
+  59:36  error  Block must be padded by blank lines                            padded-blocks
+  60:33  error  Block must be padded by blank lines                            padded-blocks
+  63:3   error  Block must be padded by blank lines                            padded-blocks
+  64:1   error  Block must be padded by blank lines                            padded-blocks
+  68:1   error  Newline not allowed at end of file                             eol-last
+
+/home/danielle/GHP/Senior/BuildAndGo-Server/server/db/models/user.spec.js
+   3:18  error  'require' is not defined                                                                               no-undef
+   4:1   error  Combine this with the previous 'const' statement                                                       one-var
+   4:12  error  'require' is not defined                                                                               no-undef
+   5:1   error  Combine this with the previous 'const' statement                                                       one-var
+   7:30  error  Block must be padded by blank lines                                                                    padded-blocks
+   8:20  error  Block must be padded by blank lines                                                                    padded-blocks
+   8:20  error  Unexpected block statement surrounding arrow body; move the returned value immediately after the `=>`  arrow-body-style
+  10:3   error  Block must be padded by blank lines                                                                    padded-blocks
+  12:37  error  Block must be padded by blank lines                                                                    padded-blocks
+  13:39  error  Block must be padded by blank lines                                                                    padded-blocks
+  14:11  error  Variable 'cody' should be initialized on declaration                                                   init-declarations
+  16:24  error  Unexpected block statement surrounding arrow body; move the returned value immediately after the `=>`  arrow-body-style
+  16:24  error  Block must be padded by blank lines                                                                    padded-blocks
+  21:11  error  Expected dot to be on same line as object                                                              dot-location
+  21:17  error  Expected parentheses around arrow function argument                                                    arrow-parens
+  21:25  error  Block must be padded by blank lines                                                                    padded-blocks
+  23:11  error  Block must be padded by blank lines                                                                    padded-blocks
+  24:7   error  Block must be padded by blank lines                                                                    padded-blocks
+  26:59  error  Block must be padded by blank lines                                                                    padded-blocks
+  28:7   error  Block must be padded by blank lines                                                                    padded-blocks
+  30:62  error  Block must be padded by blank lines                                                                    padded-blocks
+  32:7   error  Block must be padded by blank lines                                                                    padded-blocks
+  33:5   error  Block must be padded by blank lines                                                                    padded-blocks
+  34:3   error  Block must be padded by blank lines                                                                    padded-blocks
+  35:1   error  Block must be padded by blank lines                                                                    padded-blocks
+  36:1   error  Newline not allowed at end of file                                                                     eol-last
+
+/home/danielle/GHP/Senior/BuildAndGo-Server/server/index.js
+    1:14  error  'require' is not defined                                            no-undef
+    2:1   error  Combine this with the previous 'const' statement                    one-var
+    2:17  error  'require' is not defined                                            no-undef
+    3:1   error  Combine this with the previous 'const' statement                    one-var
+    3:16  error  'require' is not defined                                            no-undef
+    4:1   error  Combine this with the previous 'const' statement                    one-var
+    4:20  error  'require' is not defined                                            no-undef
+    5:1   error  Combine this with the previous 'const' statement                    one-var
+    5:21  error  'require' is not defined                                            no-undef
+    6:1   error  Combine this with the previous 'const' statement                    one-var
+    6:17  error  'require' is not defined                                            no-undef
+    7:1   error  Combine this with the previous 'const' statement                    one-var
+    7:18  error  'require' is not defined                                            no-undef
+    8:1   error  Combine this with the previous 'const' statement                    one-var
+    8:24  error  'require' is not defined                                            no-undef
+    9:1   error  Combine this with the previous 'const' statement                    one-var
+    9:12  error  'require' is not defined                                            no-undef
+   10:1   error  Combine this with the previous 'const' statement                    one-var
+   11:1   error  Combine this with the previous 'const' statement                    one-var
+   11:14  error  'process' is not defined                                            no-undef
+   11:34  error  No magic number: 8080                                               no-magic-numbers
+   12:1   error  Combine this with the previous 'const' statement                    one-var
+   13:1   error  Expected blank line after variable declarations                     newline-after-var
+   13:1   error  Combine this with the previous 'const' statement                    one-var
+   13:18  error  'require' is not defined                                            no-undef
+   14:1   error  'module' is not defined                                             no-undef
+   16:1   error  Comments should not begin with an uppercase character               capitalized-comments
+   24:1   error  Expected { after 'if' condition                                     curly
+   24:5   error  'process' is not defined                                            no-undef
+   24:44  error  'require' is not defined                                            no-undef
+   24:44  error  Unexpected require()                                                global-require
+   29:3   error  Expected no linebreak before this expression                        implicit-arrow-linebreak
+   30:5   error  Expected dot to be on same line as object                           dot-location
+   30:11  error  Expected parentheses around arrow function argument                 arrow-parens
+   31:5   error  Expected dot to be on same line as object                           dot-location
+   33:1   error  Combine this with the previous 'const' statement                    one-var
+   33:19  error  Arrow function has too many statements (13). Maximum allowed is 10  max-statements
+   33:25  error  Block must be padded by blank lines                                 padded-blocks
+   39:33  error  There should be no space after '{'                                  object-curly-spacing
+   39:50  error  There should be no space before '}'                                 object-curly-spacing
+   46:13  error  'process' is not defined                                            no-undef
+   55:20  error  'require' is not defined                                            no-undef
+   55:20  error  Unexpected require()                                                global-require
+   56:19  error  'require' is not defined                                            no-undef
+   56:19  error  Unexpected require()                                                global-require
+   59:36  error  '__dirname' is not defined                                          no-undef
+   62:31  error  Block must be padded by blank lines                                 padded-blocks
+   63:40  error  Block must be padded by blank lines                                 padded-blocks
+   64:7   error  Expected blank line after variable declarations                     newline-after-var
+   66:7   error  Expected return with your callback function                         callback-return
+   67:5   error  Block must be padded by blank lines                                 padded-blocks
+   67:12  error  Block must be padded by blank lines                                 padded-blocks
+   68:7   error  Expected return with your callback function                         callback-return
+   69:5   error  Block must be padded by blank lines                                 padded-blocks
+   70:3   error  Block must be padded by blank lines                                 padded-blocks
+   73:30  error  Block must be padded by blank lines                                 padded-blocks
+   74:28  error  '__dirname' is not defined                                          no-undef
+   75:3   error  Block must be padded by blank lines                                 padded-blocks
+   78:11  error  Arrow function has too many parameters (4). Maximum allowed is 3    max-params
+   78:27  error  'next' is defined but never used                                    no-unused-vars
+   78:36  error  Block must be padded by blank lines                                 padded-blocks
+   79:5   error  Unexpected console statement                                        no-console
+   80:5   error  Unexpected console statement                                        no-console
+   81:30  error  No magic number: 500                                                no-magic-numbers
+   82:3   error  Block must be padded by blank lines                                 padded-blocks
+   83:1   error  Block must be padded by blank lines                                 padded-blocks
+   85:1   error  Combine this with the previous 'const' statement                    one-var
+   85:30  error  Block must be padded by blank lines                                 padded-blocks
+   87:1   error  Line 87 exceeds the maximum line length of 80                       max-len
+   87:41  error  Unexpected console statement                                        no-console
+   90:3   error  Combine this with the previous 'const' statement                    one-var
+   90:3   error  Expected blank line after variable declarations                     newline-after-var
+   91:3   error  Unexpected require()                                                global-require
+   91:3   error  'require' is not defined                                            no-undef
+   92:1   error  Block must be padded by blank lines                                 padded-blocks
+   94:1   error  Combine this with the previous 'const' statement                    one-var
+   94:37  error  Missing space before value for key 'force'                          key-spacing
+   96:1   error  Expected a block comment instead of consecutive line comments       multiline-comment-style
+   96:1   error  Comments should not begin with an uppercase character               capitalized-comments
+   97:1   error  Line 97 exceeds the maximum line length of 80                       max-len
+   98:1   error  Line 98 exceeds the maximum line length of 80                       max-len
+   98:1   error  Comments should not begin with an uppercase character               capitalized-comments
+  100:5   error  'require' is not defined                                            no-undef
+  100:22  error  'module' is not defined                                             no-undef
+  100:30  error  Block must be padded by blank lines                                 padded-blocks
+  102:5   error  Expected dot to be on same line as object                           dot-location
+  103:5   error  Expected dot to be on same line as object                           dot-location
+  104:5   error  Expected dot to be on same line as object                           dot-location
+  105:1   error  Block must be padded by blank lines                                 padded-blocks
+  105:8   error  Block must be padded by blank lines                                 padded-blocks
+  107:1   error  Block must be padded by blank lines                                 padded-blocks
+  108:1   error  Newline not allowed at end of file                                  eol-last
+
+/home/danielle/GHP/Senior/BuildAndGo-Server/server/socket/index.js
+   1:1   error  'module' is not defined              no-undef
+   1:26  error  Block must be padded by blank lines  padded-blocks
+   2:35  error  Block must be padded by blank lines  padded-blocks
+   3:5   error  Unexpected console statement         no-console
+   5:35  error  Block must be padded by blank lines  padded-blocks
+   6:7   error  Unexpected console statement         no-console
+   7:5   error  Block must be padded by blank lines  padded-blocks
+   8:3   error  Block must be padded by blank lines  padded-blocks
+   9:1   error  Block must be padded by blank lines  padded-blocks
+  10:1   error  Newline not allowed at end of file   eol-last
+
+/home/danielle/GHP/Senior/BuildAndGo-Server/webpack.config.js
+   1:15  error  'process' is not defined    no-undef
+   3:1   error  'module' is not defined     no-undef
+  10:11  error  '__dirname' is not defined  no-undef
+
+✖ 406 problems (406 errors, 0 warnings)
+  215 errors, 0 warnings potentially fixable with the `--fix` option.
+

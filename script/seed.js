@@ -12,6 +12,7 @@
 const db = require('../server/db')
 const {User} = require('../server/db/models')
 
+//okay, thank you again. lets try it 
 async function seed () {
   await db.sync({force: true})
   console.log('db synced!')
