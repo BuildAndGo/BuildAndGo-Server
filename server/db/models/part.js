@@ -11,7 +11,7 @@ const Part = db.define('part', {
         allowNull: false
     },
     points: {
-        type: Sequelize.ENUM(1, 2, 3, 4, 5),
+        type: Sequelize.INTEGER,
         allowNull: false
     }
 });
