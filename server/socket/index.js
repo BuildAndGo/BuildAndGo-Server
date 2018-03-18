@@ -7,4 +7,3 @@ module.exports = (io) => {
     })
   })
 }
-//whats this crap, came with boilerplate ana set up is my guess
