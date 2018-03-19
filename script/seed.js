@@ -121,6 +121,10 @@ function buildingInventories(){
   return Promise.all(inventories.map(inventories => Inventory.create(inventories)));
 }
 
+function buildingParts (){
+  return Promise.all(parts.map(parts => Part.create(parts)));
+}
+
 function buildingTypes (){
     return Promise.all(types.map(types => Type.create(types)));
   }
