@@ -76,6 +76,16 @@ const types = [
 
 ];
 
+const parts = [
+    {
+        id: 1,
+        name: "Good-enough Tire",
+        image: "./public/sources/basic-car-tire.png",
+        points: 1,
+        
+    }
+];
+
 
 function buildingUsers() {
   return Promise.all(users.map(user => User.create(user)));
