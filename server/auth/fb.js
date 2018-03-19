@@ -1,7 +1,7 @@
 const passport = require('passport')
 const router = require('express').Router()
 const FBStrategy = require('passport-facebook')
-const {User} = require('../db/models')
+const { User } = require('../db/models')
 module.exports = router
 
 process.env.FB_CALLBACK = ''
@@ -24,7 +24,7 @@ if (!process.env.FB_CLIENT_ID || !process.env.FB_CLIENT_SECRET) {
     const name = profile.displayName
     const email = profile.emails[0].value
 
-    User.find({where: {fbId}})
+    User.find({ where: { fbId } })
       .then(foundUser => (foundUser
         ? done(null, foundUser)
         : User.create({name, email, fbId})
