@@ -1,6 +1,6 @@
 const router = require('express').Router();
 const { Inventory } = require('../db/models');
-const { makeError, isLoggedIn, isAdmin } = require('../../utils');
+// const { makeError, isLoggedIn, isAdmin } = require('../../utils');
 module.exports = router;
 
 router.param('id', (req, res, next, id) => {
