@@ -23,7 +23,7 @@ router.get('/:id', /* isLoggedIn, */ (req,res,next) => {
 })
 
 router.post('/', /* isLoggedIn, isAdmin, */ (req,res,next) => {
-  Type.create(req.type)
+  Type.create(req.body)
   .then(type => res.json(type))
   .catch(next)
 })

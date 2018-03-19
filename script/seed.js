@@ -53,25 +53,25 @@ const types = [
         id: 1,
         name: "tire",
         quantityNeeded: 4,
-        image: "./public/sources/basic-car-tire.png"
+        image: "https://s3.amazonaws.com/buildandgo-assets/basic-car-tire-wm.png"
     },
     {
         id: 2,
         name: "piston",
         quantityNeeded: 1,
-        image: "./public/sources/basic-car-piston.png"
+        image: "https://s3.amazonaws.com/buildandgo-assets/basic-car-piston-wm.png"
     },
     {
         id: 3,
         name: "frame",
         quantityNeeded: 1,
-        image: "./public/sources/basic-car-frame.png"
+        image: "https://s3.amazonaws.com/buildandgo-assets/basic-car-frame-wm.png"
     },
     {
         id: 3,
         name: "engine",
         quantityNeeded: 1,
-        image: "./public/sources/basic-car-engine.png"
+        image: "https://s3.amazonaws.com/buildandgo-assets/basic-car-engine-wm2.png"
     }
 
 ];
