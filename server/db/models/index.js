@@ -5,7 +5,7 @@ const Type = require('./type');
 
 User.hasOne(Inventory);
 Inventory.hasMany(Part);
-Part.belongsTo(Type);
+Type.hasMany(Part);
 
 module.exports = {
   User,
