@@ -48,33 +48,33 @@ const inventories = [
 
 ];
 
-// const types = [
-//     {
-//         id: 1,
-//         name: "tire",
-//         quantityNeeded: 4,
-//         image: "../public/sources/basic-car-tire.png"
-//     },
-//     {
-//         id: 2,
-//         name: "piston",
-//         quantityNeeded: 1,
-//         image: "../public/sources/basic-car-piston.png"
-//     },
-//     {
-//         id: 3,
-//         name: "frame",
-//         quantityNeeded: 1,
-//         image: "../public/sources/basic-car-frame.png"
-//     },
-//     {
-//         id: 3,
-//         name: "engine",
-//         quantityNeeded: 1,
-//         image: "../public/sources/basic-car-engine.png"
-//     }
+const types = [
+    {
+        id: 1,
+        name: "tire",
+        quantityNeeded: 4,
+        image: "../public/sources/basic-car-tire.png"
+    },
+    {
+        id: 2,
+        name: "piston",
+        quantityNeeded: 1,
+        image: "../public/sources/basic-car-piston.png"
+    },
+    {
+        id: 3,
+        name: "frame",
+        quantityNeeded: 1,
+        image: "../public/sources/basic-car-frame.png"
+    },
+    {
+        id: 3,
+        name: "engine",
+        quantityNeeded: 1,
+        image: "../public/sources/basic-car-engine.png"
+    }
 
-// ];
+];
 
 const parts = [
     {
@@ -121,9 +121,9 @@ function buildingInventories(){
   return Promise.all(inventories.map(inventories => Inventory.create(inventories)));
 }
 
-// function buildingTypes (){
-//     return Promise.all(types.map(types => Type.create(types)));
-//   }
+function buildingTypes (){
+    return Promise.all(types.map(types => Type.create(types)));
+  }
 
   function buildingParts (){
   return Promise.all(parts.map(parts => Part.create(parts)));
@@ -132,8 +132,8 @@ function buildingInventories(){
 function seed(){
   return buildingUsers()
   .then(() => buildingInventories())
-//   .then(() => buildingTypes())
-  .then(() => buildingParts())
+  .then(() => buildingTypes())
+  .then(() => buildingParts());
 }
 
 console.log('Syncing Database');
@@ -146,7 +146,7 @@ db.sync({force: true})
 .then(() => console.log('Seeding Successful'))
 .catch(err => {
   console.error('Error while seeding');
-  console.error(err.stack)
+  console.error(err.stack);
 })
 .finally(() => {
   db.close();
