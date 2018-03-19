@@ -12,6 +12,7 @@ InventoryList = db.define('inventory_list', {
 User.hasOne(Inventory);
 Part.belongsToMany(Inventory, {through: InventoryList});
 Type.hasMany(Part);
+Inventory.hasMany(Part);
 
 module.exports = {
   User,
