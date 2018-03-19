@@ -1,15 +1,22 @@
+const Sequelize = require('sequelize');
+const db = require('../db');
 const User = require('./user');
 const Inventory = require('./inventory');
 const Part = require('./part');
 const Type = require('./type');
 
+InventoryList = db.define('inventory_list', {
+  role: Sequelize.ARRAY(Sequelize.STRING)
+});
+
 User.hasOne(Inventory);
-Inventory.hasMany(Part);
+Part.belongsToMany(Inventory, {through: InventoryList});
 Type.hasMany(Part);
 
 module.exports = {
   User,
   Inventory,
   Part,
-  Type
+  Type,
+  InventoryList
 }
