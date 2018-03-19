@@ -16,6 +16,12 @@ router.param('id', (req, res, next, id) => {
   .catch(next)
 })
 
+router.get('/', (req,res,next) => {
+  Part.findAll({ include: [{ all: true }] })
+  .then(parts => res.json(parts))
+  .catch(next)
+})
+
 router.get('/:id', /* isLoggedIn, */ (req,res,next) => {
   req.part.reload({ include: [{ all: true }] })
   .then(part => res.json(part))
