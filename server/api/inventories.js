@@ -32,3 +32,9 @@ router.put('/:id', /* isLoggedIn, */ (req,res,next) => {
   req.inventory.update(req.body)
   .then(() => req.user.reload({ include: [{ all: true }] }))
 });
+
+router.delete('/:id', /* isLoggedIn, isAdmin, */ (req, res, next) => {
+  req.inventory.destroy()
+  .then(() => res.json(req.inventory))
+  .catch(next);
+})

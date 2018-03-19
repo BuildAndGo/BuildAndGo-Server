@@ -38,3 +38,9 @@ router.put('/:id', /* isLoggedIn, isAdmin, */ (req,res,next) => {
   req.type.update(req.body)
   .then(() => req.type.reload({ include: [{ all: true }] }))
 });
+
+router.delete('/:id', /* isLoggedIn, isAdmin, */ (req, res, next) => {
+  req.type.destroy()
+  .then(() => res.json(req.type))
+  .catch(next);
+})

@@ -78,11 +78,10 @@ const types = [
 
 const parts = [
     {
-        id: 1,
         name: "Good-enough Tire",
         image: "./public/sources/basic-car-tire.png",
         points: 1,
-
+        typeId: 1
     }
 ];
 
