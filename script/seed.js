@@ -1,24 +1,20 @@
-const {User, Inventory, Part, Type} = require('../server/db/models');
+const { User, Inventory, Part, Type } = require('../server/db/models');
 const db = require('../server/db');
 
 const users = [
     {
-        id: 1,
         email: "danielle@howard.com",
         password: "thisisapassword",
     },
     {
-        id: 2,
         email: "sarah@wooten.com",
         password: "lovingNYC",
     },
     {
-        id: 3,
         email: "eunji@song.com",
         password: "livinginqueens",
     },
     {
-        id: 4,
         email: "ana@sanchez.com",
         password: "intheheights",
     }
@@ -29,7 +25,6 @@ const inventories = [
         quantity: 1,
         userId: 1
     },
-    {
         quantity: 1,
         userId: 2
     },
@@ -72,29 +67,31 @@ const parts = [
         name: "Good-enough Tire",
         image: "../public/sources/basic-car-tire.png",
         points: 1,
-
+        typeId: 1      
     },
     {
         name: "Good-enough Engine",
         image: "../public/sources/basic-car-engine.png",
         points: 1,
-
+        typeId: 4      
     },
     {
         name: "Good-enough Frame",
         image: "../public/sources/basic-car-frame.png",
         points: 1,
+        typeId: 3      
     },
     {
         name: "Good-enough Piston",
         image: "../public/sources/basic-car-piston.png",
         points: 1,
+        typeId: 2      
     },
     {
         name: "Premium Tire",
         image: "../public/sources/premium-car-tire.png",
         points: 5,
-
+        typeId: 1        
     }
 ];
 
@@ -132,6 +129,3 @@ seed()
     db.close()
     console.log('db connection closed')
   })
-
-
-
