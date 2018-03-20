@@ -24,7 +24,7 @@ const inventories = [
     {
         quantity: 1,
         userId: 1
-    },
+    },{
         quantity: 1,
         userId: 2
     },
@@ -67,31 +67,31 @@ const parts = [
         name: "Good-enough Tire",
         image: "../public/sources/basic-car-tire.png",
         points: 1,
-        typeId: 1      
+        typeId: 1
     },
     {
         name: "Good-enough Engine",
         image: "../public/sources/basic-car-engine.png",
         points: 1,
-        typeId: 4      
+        typeId: 4
     },
     {
         name: "Good-enough Frame",
         image: "../public/sources/basic-car-frame.png",
         points: 1,
-        typeId: 3      
+        typeId: 3
     },
     {
         name: "Good-enough Piston",
         image: "../public/sources/basic-car-piston.png",
         points: 1,
-        typeId: 2      
+        typeId: 2
     },
     {
         name: "Premium Tire",
         image: "../public/sources/premium-car-tire.png",
         points: 5,
-        typeId: 1        
+        typeId: 1
     }
 ];
 
