@@ -14,16 +14,22 @@ router.param('id', (req, res, next, id) => {
     next();
   })
   .catch(next)
-})
+});
+
+router.get('/', (req,res,next) => {
+  Type.findAll({ include: [{ all: true }] })
+  .then(types => res.json(types))
+  .catch(next)
+});
 
 router.get('/:id', /* isLoggedIn, */ (req,res,next) => {
   req.type.reload({ include: [{ all: true }] })
   .then(type => res.json(type))
   .catch(next)
-})
+});
 
 router.post('/', /* isLoggedIn, isAdmin, */ (req,res,next) => {
-  Type.create(req.type)
+  Type.create(req.body)
   .then(type => res.json(type))
   .catch(next)
 })
@@ -31,4 +37,10 @@ router.post('/', /* isLoggedIn, isAdmin, */ (req,res,next) => {
 router.put('/:id', /* isLoggedIn, isAdmin, */ (req,res,next) => {
   req.type.update(req.body)
   .then(() => req.type.reload({ include: [{ all: true }] }))
+});
+
+router.delete('/:id', /* isLoggedIn, isAdmin, */ (req, res, next) => {
+  req.type.destroy()
+  .then(() => res.json(req.type))
+  .catch(next);
 })

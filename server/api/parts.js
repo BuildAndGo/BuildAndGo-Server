@@ -16,6 +16,12 @@ router.param('id', (req, res, next, id) => {
   .catch(next)
 })
 
+router.get('/', (req,res,next) => {
+  Part.findAll({ include: [{ all: true }] })
+  .then(parts => res.json(parts))
+  .catch(next)
+})
+
 router.get('/:id', /* isLoggedIn, */ (req,res,next) => {
   req.part.reload({ include: [{ all: true }] })
   .then(part => res.json(part))
@@ -31,4 +37,10 @@ router.post('/', /* isLoggedIn, isAdmin, */ (req,res,next) => {
 router.put('/:id', /* isLoggedIn, */ (req,res,next) => {
   req.part.update(req.part)
   .then(() => req.part.reload({ include: [{ all: true }] }))
+})
+
+router.delete('/:id', /* isLoggedIn, isAdmin, */ (req, res, next) => {
+  req.part.destroy()
+  .then(() => res.json(req.part))
+  .catch(next);
 })
