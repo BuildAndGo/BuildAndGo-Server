@@ -1,24 +1,20 @@
-const {User, Inventory, Part, Type} = require('../server/db/models');
+const { User, Inventory, Part, Type } = require('../server/db/models');
 const db = require('../server/db');
 
 const users = [
     {
-        id: 1,
         email: "danielle@howard.com",
         password: "thisisapassword",
     },
     {
-        id: 2,
         email: "sarah@wooten.com",
         password: "lovingNYC",
     },
     {
-        id: 3,
         email: "eunji@song.com",
         password: "livinginqueens",
     },
     {
-        id: 4,
         email: "ana@sanchez.com",
         password: "intheheights",
     }
@@ -70,31 +66,31 @@ const types = [
 const parts = [
     {
         name: "Good-enough Tire",
-        image: "../public/sources/basic-car-tire.png",
+        image: "https://s3.amazonaws.com/buildandgo-assets/basic-car-tire-wm.png",
         points: 1,
         typeId: 1
     },
     {
         name: "Good-enough Engine",
-        image: "../public/sources/basic-car-engine.png",
+        image: "https://s3.amazonaws.com/buildandgo-assets/basic-car-engine-wm2.png",
         points: 1,
         typeId: 4
     },
     {
         name: "Good-enough Frame",
-        image: "../public/sources/basic-car-frame.png",
+        image: "https://s3.amazonaws.com/buildandgo-assets/basic-car-frame-wm.png",
         points: 1,
         typeId: 3
     },
     {
         name: "Good-enough Piston",
-        image: "../public/sources/basic-car-piston.png",
+        image: "https://s3.amazonaws.com/buildandgo-assets/basic-car-piston-wm.png",
         points: 1,
         typeId: 2
     },
     {
         name: "Premium Tire",
-        image: "../public/sources/premium-car-tire.png",
+        image: "https://s3.amazonaws.com/buildandgo-assets/basic-car-tire-wm.png",
         points: 5,
         typeId: 1
     }
@@ -134,6 +130,3 @@ seed()
     db.close()
     console.log('db connection closed')
   })
-
-
-
