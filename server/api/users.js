@@ -50,6 +50,12 @@ router.delete('/:id', /* isLoggedIn, isAdmin, */ (req, res, next) => {
   .catch(next);
 });
 
+router.get('/:id/inventory', /* isLoggedIn, isAdmin, */ (req, res, next) => {
+  req.requestedUser.reload({ include: [{ all: true }] })
+  .then(() => req.requestedUser.getParts())
+  .then(parts => res.json(parts))
+});
+
 router.put('/:id/inventory', /* isLoggedIn, isAdmin, */ (req, res, next) => {
   let newPart = req.body;
   req.requestedUser.getParts({ where: { id: part.id } })
