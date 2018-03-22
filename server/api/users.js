@@ -39,7 +39,7 @@ router.post('/', /* isLoggedIn, isAdmin, */ (req, res, next) => {
 
 router.put('/:id', /* isLoggedIn, isAdmin, */ (req, res, next) => {
   req.requestedUser.update(req.body)
-    .then(() => req.user.reload({ include: [{ all: true }] }))
+  .then(() => req.user.reload({ include: [{ all: true }] }))
   .then(result => res.json(result))
   .catch(next);
 });
@@ -51,12 +51,16 @@ router.delete('/:id', /* isLoggedIn, isAdmin, */ (req, res, next) => {
 });
 
 router.put('/:id/inventory', /* isLoggedIn, isAdmin, */ (req, res, next) => {
-  part = req.body;
+  let newPart = req.body;
   req.requestedUser.getParts({ where: { id: part.id } })
-  .then(result => {
-    result.quantity - part.quantity < 1 ? req.requestedUser.removePart(result) :
-    req.requestedUser.removePart(result)
+  .then(oldPart => {
+    let quantity = oldPart.quantity - newPart.quantity;
+    req.requestedUser.removePart(oldPart);
+    return result;
+    // ?
+    // req.requestedUser.removePart(result)
   })
+  .then(oldPart)
   .then(() => res.send(req.requestedUser))
   .catch(next);
 });
