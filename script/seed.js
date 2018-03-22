@@ -20,24 +20,24 @@ const users = [
     }
 ];
 
-const inventories = [
-    {
-        quantity: 1,
-        userId: 1
-    },
-    {
-        quantity: 1,
-        userId: 2
-    },
-    {
-        quantity: 1,
-        userId: 3
-    },
-    {
-        quantity: 1,
-        userId: 4
-    }
-];
+// const inventories = [
+//     {
+//         quantity: 1,
+//         userId: 1
+//     },
+//     {
+//         quantity: 1,
+//         userId: 2
+//     },
+//     {
+//         quantity: 1,
+//         userId: 3
+//     },
+//     {
+//         quantity: 1,
+//         userId: 4
+//     }
+// ];
 
 const types = [
     {
@@ -101,22 +101,26 @@ async function seed() {
     await db.sync({ force: true })
     console.log('db synced!')
     const fillUsers = await Promise.all(users.map(user => User.create(user)));
+    console.log('fill users', fillUsers)
     const fillTypes = await Promise.all(types.map(types => Type.create(types)));
-    const fillParts = await Promise.all(parts.map(part => Part.create(part)));
+    const fillParts = await Promise.all(parts.map(part => Part.create(part)
+    .then(part => fillUsers[0].addParts(part))
 
-    const fillInventories = await Promise.all([
-    Inventory.create({
-        quantity: 1,
-        userId: 1
-    })
-    .then(inventory => inventory.setParts([1]))
-    ,
-    Inventory.create({
-        quantity: 1,
-        userId: 2
-    })
-    .then(inventory => inventory.setParts([2, 4]))
-    ])
+));
+    // const fillInventories = await user.addPart()
+    // const fillInventories = await Promise.all([
+    // Inventory.create({
+    //     quantity: 1,
+    //     userId: 1
+    // })
+    // .then(inventory => inventory.setParts([1]))
+    // ,
+    // Inventory.create({
+    //     quantity: 1,
+    //     userId: 2
+    // })
+    // .then(inventory => inventory.setParts([2, 4]))
+    // ])
 }
 
 seed()

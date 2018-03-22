@@ -1,6 +1,8 @@
 const crypto = require('crypto')
 const Sequelize = require('sequelize')
 const db = require('../db')
+const Part = require('./part');
+const Inventory = require('./inventory');
 
 const User = db.define('user', {
   email: {
@@ -26,6 +28,11 @@ const User = db.define('user', {
   },
   googleId: {
     type: Sequelize.STRING
+  }
+},
+{
+  defaultScope: {
+    include: [{ model: Part }]
   }
 })
 
