@@ -20,23 +20,24 @@ const users = [
     }
 ];
 
-const inventories = [
-    {
-        quantity: 1,
-        userId: 1
-    },{
-        quantity: 1,
-        userId: 2
-    },
-    {
-        quantity: 1,
-        userId: 3
-    },
-    {
-        quantity: 1,
-        userId: 4
-    }
-];
+// const inventories = [
+//     {
+//         quantity: 1,
+//         userId: 1
+//     },
+//     {
+//         quantity: 1,
+//         userId: 2
+//     },
+//     {
+//         quantity: 1,
+//         userId: 3
+//     },
+//     {
+//         quantity: 1,
+//         userId: 4
+//     }
+// ];
 
 const types = [
     {
@@ -65,31 +66,31 @@ const types = [
 const parts = [
     {
         name: "Good-enough Tire",
-        image: "../public/sources/basic-car-tire.png",
+        image: "https://s3.amazonaws.com/buildandgo-assets/basic-car-tire-wm.png",
         points: 1,
         typeId: 1
     },
     {
         name: "Good-enough Engine",
-        image: "../public/sources/basic-car-engine.png",
+        image: "https://s3.amazonaws.com/buildandgo-assets/basic-car-engine-wm2.png",
         points: 1,
         typeId: 4
     },
     {
         name: "Good-enough Frame",
-        image: "../public/sources/basic-car-frame.png",
+        image: "https://s3.amazonaws.com/buildandgo-assets/basic-car-frame-wm.png",
         points: 1,
         typeId: 3
     },
     {
         name: "Good-enough Piston",
-        image: "../public/sources/basic-car-piston.png",
+        image: "https://s3.amazonaws.com/buildandgo-assets/basic-car-piston-wm.png",
         points: 1,
         typeId: 2
     },
     {
         name: "Premium Tire",
-        image: "../public/sources/premium-car-tire.png",
+        image: "https://s3.amazonaws.com/buildandgo-assets/basic-car-tire-wm.png",
         points: 5,
         typeId: 1
     }
@@ -100,22 +101,26 @@ async function seed() {
     await db.sync({ force: true })
     console.log('db synced!')
     const fillUsers = await Promise.all(users.map(user => User.create(user)));
+    console.log('fill users', fillUsers)
     const fillTypes = await Promise.all(types.map(types => Type.create(types)));
-    const fillParts = await Promise.all(parts.map(part => Part.create(part)));
+    const fillParts = await Promise.all(parts.map(part => Part.create(part)
+    .then(part => fillUsers[0].addParts(part))
 
-    const fillInventories = await Promise.all([
-    Inventory.create({
-        quantity: 1,
-        userId: 1
-    })
-    .then(inventory => inventory.setParts([1]))
-    ,
-    Inventory.create({
-        quantity: 1,
-        userId: 2
-    })
-    .then(inventory => inventory.setParts([2, 4]))
-    ])
+));
+    // const fillInventories = await user.addPart()
+    // const fillInventories = await Promise.all([
+    // Inventory.create({
+    //     quantity: 1,
+    //     userId: 1
+    // })
+    // .then(inventory => inventory.setParts([1]))
+    // ,
+    // Inventory.create({
+    //     quantity: 1,
+    //     userId: 2
+    // })
+    // .then(inventory => inventory.setParts([2, 4]))
+    // ])
 }
 
 seed()
