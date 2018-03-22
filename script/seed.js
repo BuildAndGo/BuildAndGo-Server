@@ -20,25 +20,6 @@ const users = [
     }
 ];
 
-// const inventories = [
-//     {
-//         quantity: 1,
-//         userId: 1
-//     },
-//     {
-//         quantity: 1,
-//         userId: 2
-//     },
-//     {
-//         quantity: 1,
-//         userId: 3
-//     },
-//     {
-//         quantity: 1,
-//         userId: 4
-//     }
-// ];
-
 const types = [
     {
         name: "tire",
@@ -68,7 +49,8 @@ const parts = [
         name: "Good-enough Tire",
         image: "https://s3.amazonaws.com/buildandgo-assets/basic-car-tire-wm.png",
         points: 1,
-        typeId: 1
+        typeId: 1,
+        quantity: 4
     },
     {
         name: "Good-enough Engine",
@@ -101,26 +83,12 @@ async function seed() {
     await db.sync({ force: true })
     console.log('db synced!')
     const fillUsers = await Promise.all(users.map(user => User.create(user)));
-    console.log('fill users', fillUsers)
     const fillTypes = await Promise.all(types.map(types => Type.create(types)));
-    const fillParts = await Promise.all(parts.map(part => Part.create(part)
-    .then(part => fillUsers[0].addParts(part))
-
-));
-    // const fillInventories = await user.addPart()
-    // const fillInventories = await Promise.all([
-    // Inventory.create({
-    //     quantity: 1,
-    //     userId: 1
-    // })
-    // .then(inventory => inventory.setParts([1]))
-    // ,
-    // Inventory.create({
-    //     quantity: 1,
-    //     userId: 2
-    // })
-    // .then(inventory => inventory.setParts([2, 4]))
-    // ])
+    const fillParts = await Promise.all(parts.map(part => Part.create(part)))
+    const fillUser1 = await Promise.all(fillParts.map(part => fillUsers[0].addPart(part, { through: { quantity: 1 } })))
+    const fillUser2 = await Promise.all(fillParts.slice(2).map(part => fillUsers[1].addPart(part, { through: { quantity: 1 } })))
+    const fillUser3 = await Promise.all(fillParts.map(part => fillUsers[2].addPart(part, { through: { quantity: 1 } })))
+    const fillUser4 = await Promise.all(fillParts.slice(1).map(part => fillUsers[3].addPart(part, { through: { quantity: 1 } })))
 }
 
 seed()

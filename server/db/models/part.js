@@ -1,5 +1,7 @@
 const Sequelize = require('sequelize');
 const db = require('../db');
+const Type = require ('./type')
+
 
 const Part = db.define('part', {
     name: {
@@ -14,8 +16,12 @@ const Part = db.define('part', {
         type: Sequelize.INTEGER,
         allowNull: false
     }
-});
-
- //leaving off a getter method for the typeId
+},
+{
+    defaultScope: {
+        include: [{ model: Type }]
+    }
+}
+);
 
 module.exports = Part;
