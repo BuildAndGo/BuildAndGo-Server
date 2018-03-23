@@ -54,6 +54,7 @@ router.get('/:id/inventory', /* isLoggedIn, isAdmin, */ (req, res, next) => {
   req.requestedUser.reload({ include: [{ all: true }] })
   .then(() => req.requestedUser.getParts())
   .then(parts => res.json(parts))
+  .catch(next);
 });
 
 router.put('/:id/inventory', /* isLoggedIn, isAdmin, */ (req, res, next) => {
@@ -63,8 +64,6 @@ router.put('/:id/inventory', /* isLoggedIn, isAdmin, */ (req, res, next) => {
     let quantity = oldPart.quantity - newPart.quantity;
     req.requestedUser.removePart(oldPart);
     return result;
-    // ?
-    // req.requestedUser.removePart(result)
   })
   .then(oldPart)
   .then(() => res.send(req.requestedUser))

@@ -4,19 +4,19 @@ const db = require('../server/db');
 const users = [
     {
         email: "danielle@howard.com",
-        password: "thisisapassword",
+        password: "1234",
     },
     {
         email: "sarah@wooten.com",
-        password: "lovingNYC",
+        password: "1234",
     },
     {
         email: "eunji@song.com",
-        password: "livinginqueens",
+        password: "1234",
     },
     {
         email: "ana@sanchez.com",
-        password: "intheheights",
+        password: "1234",
     }
 ];
 
