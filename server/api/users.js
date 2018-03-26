@@ -10,7 +10,7 @@ module.exports = router
 //   })
 //     .then(users => res.json(users))
 //     .catch(next)
-// })
+// })ee
 
 router.param('id', (req,res,next, id) => {
   User.findById(id)
@@ -58,29 +58,35 @@ router.get('/:id/inventory', /* isLoggedIn, isAdmin, */ (req, res, next) => {
 });
 
 router.put('/:id/inventory', /* isLoggedIn, isAdmin, */ (req, res, next) => {
-  let newPart = req.body;
-  req.requestedUser.getParts({ where: { id: part.id } })
-  .then(oldPart => {
-    let quantity = oldPart.quantity - newPart.quantity;
-    req.requestedUser.removePart(oldPart);
-    return result;
+  let updatePart = req.body;
+  req.requestedUser.getParts({ where: { typeId: updatePart.typeId } })
+  .then(oldPart => req.requestedUser.removePart(oldPart))
+  .then(() => Part.findById(updatePart.id))
+  .then(newPart => {
+    req.requestedUser.addPart(newPart, { through: { quantity: newPart.type.quantityNeeded }} )
+    return newPart;
   })
-  .then(oldPart)
-  .then(() => res.send(req.requestedUser))
+  .then(addedPart => res.send(addedPart))
   .catch(next);
 });
 
 router.post('/:id/inventory', /* isLoggedIn, isAdmin, */ (req, res, next) => {
-  part = req.body;
+  let part = req.body;
   Part.findById(part.id)
-  .then(result => req.requestedUser.addPart(result, { through: { quantity: part.quantity }} ))
-  .then(() => res.send(req.requestedUser))
+  .then(newPart => {
+    req.requestedUser.addPart(newPart, { through: { quantity: newPart.type.quantityNeeded }} )
+    return newPart;
+  })
+  .then(addedPart => res.send(addedPart))
   .catch(next);
 });
 
 router.delete('/:id/inventory', /* isLoggedIn, isAdmin, */ (req, res, next) => {
   req.requestedUser.getParts({ where: { id: req.body.id } })
-  .then(result => req.requestedUser.removePart(result))
-  .then(() => res.send(req.requestedUser.reload()))
+  .then(result => {
+    req.requestedUser.removePart(result);
+    return req.body;
+  })
+  .then(deletedPart => res.send(deletedPart))
   .catch(next);
 });
