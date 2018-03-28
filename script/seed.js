@@ -46,35 +46,54 @@ const types = [
 
 const parts = [
     {
-        name: "Good-enough Tire",
+        name: "GudYears Tire",
         image: "https://s3.amazonaws.com/buildandgo-assets/basic-car-tire-wm.png",
         points: 1,
         typeId: 1,
         quantity: 4
     },
     {
-        name: "Good-enough Engine",
+        name: "DOT Competition Tire",
+        image: "../public/images/racingTire.png",
+        points: 5,
+        typeId: 1,
+        quantity: 4
+    },
+    {
+        name: "Diesel Engine",
         image: "https://s3.amazonaws.com/buildandgo-assets/basic-car-engine-wm2.png",
         points: 1,
         typeId: 4
     },
     {
-        name: "Good-enough Frame",
+        name: "Bugatten Engine",
+        image: "../public/images/engine.png",
+        points: 5,
+        typeId: 4
+    },
+    {
+        name: "Sedan Frame",
         image: "https://s3.amazonaws.com/buildandgo-assets/basic-car-frame-wm.png",
         points: 1,
         typeId: 3
     },
     {
-        name: "Good-enough Piston",
+        name: "Racing Frame",
+        image: "../public/images/superiorframe.png",
+        points: 5,
+        typeId: 3
+    },
+    {
+        name: "Crosshead Piston",
         image: "https://s3.amazonaws.com/buildandgo-assets/basic-car-piston-wm.png",
         points: 1,
         typeId: 2
     },
     {
-        name: "Premium Tire",
-        image: "https://s3.amazonaws.com/buildandgo-assets/basic-car-tire-wm.png",
-        points: 5,
-        typeId: 1
+        name: "Slipper Piston",
+        image: "../public/images/slipperPiston.png",
+        points: 1,
+        typeId: 2
     }
 ];
 
