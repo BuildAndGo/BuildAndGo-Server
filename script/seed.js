@@ -46,35 +46,54 @@ const types = [
 
 const parts = [
     {
-        name: "Good-enough Tire",
-        image: "https://s3.amazonaws.com/buildandgo-assets/basic-car-tire-wm.png",
+        name: "GudYears Tire",
+        image: "../public/images/300inferiorTire.png",
         points: 1,
         typeId: 1,
         quantity: 4
     },
     {
-        name: "Good-enough Engine",
-        image: "https://s3.amazonaws.com/buildandgo-assets/basic-car-engine-wm2.png",
+        name: "DOT Competition Tire",
+        image: "../public/images/300racingTire.png",
+        points: 5,
+        typeId: 1,
+        quantity: 4
+    },
+    {
+        name: "Diesel Engine",
+        image: "../public/images/300inferiorengine.jpg",
         points: 1,
         typeId: 4
     },
     {
-        name: "Good-enough Frame",
-        image: "https://s3.amazonaws.com/buildandgo-assets/basic-car-frame-wm.png",
+        name: "Bugatten Engine",
+        image: "../public/images/300superiorEngine.png",
+        points: 5,
+        typeId: 4
+    },
+    {
+        name: "Sedan Frame",
+        image: "../public/images/300frame.png",
         points: 1,
         typeId: 3
     },
     {
-        name: "Good-enough Piston",
-        image: "https://s3.amazonaws.com/buildandgo-assets/basic-car-piston-wm.png",
+        name: "Racing Frame",
+        image: "../public/images/300frame.png",
+        points: 5,
+        typeId: 3
+    },
+    {
+        name: "Crosshead Piston",
+        image: "../public/images/300crossheadPiston.png",
         points: 1,
         typeId: 2
     },
     {
-        name: "Premium Tire",
-        image: "https://s3.amazonaws.com/buildandgo-assets/basic-car-tire-wm.png",
-        points: 5,
-        typeId: 1
+        name: "Slipper Piston",
+        image: "../public/images/300slipperPiston.png",
+        points: 1,
+        typeId: 2
     }
 ];
 
