@@ -4,13 +4,10 @@ Build and Go is an augmented reality mobile game for Android and iOS X. Search t
 
 
 # Technologies
-Build and Go was made using React Native as well as ViroMedia SDK for augmented reality, React Navigation for app navigation, and Redux to store state.
-
-Our backend server was made using Node.js, Express, and Sequelize with PostgreSQL and was deployed to Heroku for remote access.
-
+Our backend server was made using Node.js, Express, Sequelize, PostgreSQL, and deployed to Heroku for remote access.
 
 # Team
-@anacsanchez
-@edanielleh
-@eunjisong
-@snwooten
+* [Ana Sanchez](https://github.com/anacsanchez)
+* [Danielle Howard](https://github.com/danielleh)
+* [Eunji Song](https://github.com/eunjisong)
+* [Sarah Wooten](https://github.com/snwooten)
